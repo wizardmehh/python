@@ -1,0 +1,4 @@
+#Replacing white space with '_' charcter.
+import re
+str="Learning Python is fun"
+re.sub("\s","_",str)
