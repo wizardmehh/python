@@ -1,0 +1,34 @@
+#GUI read temperature
+
+from tkinter import *
+def exit():
+    win.destroy()
+def convert():
+    c = int(e1.get())
+    f = ((c * 9) / (5)) + 32
+    l3.config(text=f)
+
+
+win = Tk()
+win.geometry("300x250")
+win.config(bg="#9AB")
+
+l1 = Label(win, text="Enter temperature in Celsius: ",
+           font=("Arial", 10, "bold"), fg="white", bg="#9AB")
+l2 = Label(win, text="Temperature in Fahrenheit is: ",
+           font=("Arial", 10, "bold"), fg="white", bg="#9AB")
+l3 = Label(win, width=15, height=0)
+e1 = Entry(win, font=('Arial', 10))
+btn1 = Button(win, text="Convert to Fahrenheit!",
+              font=("Arial", 10), command=convert)
+btn2 = Button(win, text="Exit application",
+              font=("Arial", 10), command=exit)
+
+l1.pack(pady=5)
+e1.pack(pady=5)
+btn1.pack(pady=10)
+l2.pack(pady=10)
+l3.pack(pady=5)
+btn2.pack(pady=5)
+
+win.mainloop()
