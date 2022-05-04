@@ -1,0 +1,7 @@
+#Program to split lines
+import re 
+str="""This is line one of multiline line text
+Line 2
+Line 3 \and line 4"""
+result=re.split("\n",str)
+print(result)
